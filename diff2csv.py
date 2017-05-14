@@ -32,7 +32,7 @@ class diff2csv(object):
 
             # デバッグ用    
             print("DEBUG: "+output_buff)
-            with open("test.csv","w") as f:
+            with open("test.csv","wb") as f:
                 f.write(output_buff)
 
         is_minus_flag = 0
@@ -176,20 +176,20 @@ def main():
         before_file_path = args.before
         after_file_path = args.after
 
-    # ファイル読み込み
-    with open(before_file_path,"r") as f:
-        before_lines = f.read()
-    before_lines = before_lines.splitlines()
-    with open(after_file_path,"r") as f:
-        after_lines = f.read()
-    after_lines = after_lines.splitlines()
+    # # ファイル読み込み
+    # with open(before_file_path,"r") as f:
+    #     before_lines = f.read()
+    # before_lines = before_lines.splitlines()
+    # with open(after_file_path,"r") as f:
+    #     after_lines = f.read()
+    # after_lines = after_lines.splitlines()
 
-    ### DEBUG ###
-    for buf in before_lines:
-        print(buf)
-    for buf in after_lines:
-        print(buf)
-    sys.exit()
+    # ### DEBUG ###
+    # for buf in before_lines:
+    #     print(buf)
+    # for buf in after_lines:
+    #     print(buf)
+    # sys.exit()
 
     d2c = diff2csv()
     d2c.diff2csv(text1_lines,text2_lines,"hoge")
