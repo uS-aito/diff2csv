@@ -1,2 +1,4 @@
-test*
-diff2csv.old
+/test*
+*.old.py
+test.csv
+test.py
